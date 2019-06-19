@@ -1,13 +1,15 @@
-import React, { Component } from 'react'
+import React from 'react'
+import { Route } from 'react-router-dom'
+import Home from '../../Components/Buisness/Home/Home';
 
-class HomeLayout extends Component {
-    render () {
-        return (
-            <div>
-                
-            </div>
-        )
-    }
-}
+const HomeLayout = ({ component: Component, ...rest }) => {
+    return (
+        <Route {...rest} render={matchProps => (
+            <Home>
+                <Component {...matchProps} />
+            </Home>
+        )} />
+    )
+};
 
-export default HomeLayout
+export default HomeLayout;  

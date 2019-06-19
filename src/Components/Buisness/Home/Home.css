@@ -1,1 +1,58 @@
-/* No CSS *//*# sourceMappingURL=Home.css.map */
+.homeWrapper {
+  height: 100vh;
+}
+
+.homeWrapper__bckgrdImg {
+  background-image: url("/Images/background.png");
+  background-repeat: none;
+  background-position-x: center;
+  background-position-y: center;
+  height: inherit;
+}
+
+.homeWrapper__logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.homeWrapper__logo__button {
+  background-color: "#019AA2";
+  border-radius: "25px";
+  color: "#ffffff";
+}
+
+.homeWrapper__logo__logoDiv img {
+  width: 300px;
+}
+
+@media (min-width: 425px) {
+  .homeWrapper__logo__logoDiv img {
+    width: 400px;
+  }
+}
+
+@media (min-width: 768px) {
+  .homeWrapper__logo__logoDiv img {
+    width: 500px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .homeWrapper__logo__logoDiv img {
+    width: 600px;
+  }
+}
+/*# sourceMappingURL=Home.css.map */

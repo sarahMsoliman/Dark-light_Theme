@@ -1,13 +1,16 @@
-import React, { Component } from 'react'
+import React from 'react'
+import { Route } from 'react-router-dom'
+import Settings from '../../Components/Buisness/Settings/Settings';
 
-class SettingsLayout extends Component {
-    render () {
-        return (
-            <div>
-                
-            </div>
-        )
-    }
-}
+const SettingsLayout = ({ component: Component, ...rest }) => {
+    return (
+        <Route {...rest} render={matchProps => (
+            <Settings>
+                <Component {...matchProps} />
+            </Settings>
+        )} />
+    )
+};
 
-export default SettingsLayout
+export default SettingsLayout;
+
