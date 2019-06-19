@@ -1,16 +1,25 @@
 import React, { Component } from 'react'
 import Switch from "react-switch";
+import { setLocalStorage, getLocalStorage } from '../../../Utilities/LocalStorage/LocalStorage'
 
 class ThemeSwitcher extends Component {
 
-    constructor() {
+    constructor(props) {
         super();
-        this.state = { checked: false };
+        var currentTheme = props.currentTheme
+        this.state = {
+            checked: getLocalStorage()
+        };
         this.handleChange = this.handleChange.bind(this);
     }
 
     handleChange(checked) {
-        this.setState({ checked });
+        this.setState({
+            checked
+        }, () => {
+            setLocalStorage(this.state.checked);
+        }
+        );
     }
 
     render() {

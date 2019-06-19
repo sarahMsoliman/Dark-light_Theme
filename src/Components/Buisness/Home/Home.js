@@ -4,6 +4,14 @@ import './Home.css'
 
 class Home extends Component {
     render() {
+        const style = {
+            backgroundColor: "#019AA2",
+            borderRadius: "25px",
+            color: "#ffffff",
+            padding: "0.5rem",
+            width: "139px",
+            height: "43px"
+        }
         return (
             <div className="homeWrapper container-fluid">
                 <div className="homeWrapper__bckgrdImg" />
@@ -14,7 +22,13 @@ class Home extends Component {
                             alt="logo"
                         />
                     </div>
-                    <Link to="/settings" type="button" className="btn homeWrapper__logo__button">Settings</Link>
+                    <Link
+                        to="/settings"
+                        type="button"
+                        className="btn homeWrapper__logo__button"
+                        style={style}>
+                        Settings
+                    </Link>
                 </div>
             </div>
         )

@@ -15,7 +15,7 @@ class Router extends Component {
                     </Switch>
                 </React.Fragment>
             </BrowserRouter>
-        );
+        ); 
     }
 }
 export default Router

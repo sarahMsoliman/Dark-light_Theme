@@ -28,12 +28,6 @@
           align-items: center;
 }
 
-.homeWrapper__logo__button {
-  background-color: "#019AA2";
-  border-radius: "25px";
-  color: "#ffffff";
-}
-
 .homeWrapper__logo__logoDiv img {
   width: 300px;
 }

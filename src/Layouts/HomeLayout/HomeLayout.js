@@ -1,15 +1,12 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Route } from 'react-router-dom'
 import Home from '../../Components/Buisness/Home/Home';
 
-const HomeLayout = ({ component: Component, ...rest }) => {
-    return (
-        <Route {...rest} render={matchProps => (
-            <Home>
-                <Component {...matchProps} />
-            </Home>
-        )} />
-    )
-};
-
-export default HomeLayout;  
+class HomeLayout extends Component {
+    render() {
+        return (
+            <Home currentTheme={this.props.currentTheme}/>
+        );
+    }
+}
+export default HomeLayout; 
