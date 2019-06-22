@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAAA,AAAA,mBAAmB,CAAC;EAChB,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,MAAM;CAKtB;;AAPD,AAGE,mBAHiB,CAGjB,IAAI,CAAC;EACH,YAAY,EAAE,MAAM;EACpB,KAAK,EAAE,OAAO;CACf",
     "sources": [
         "ThemeSwitcher.scss"
     ],

@@ -10,7 +10,8 @@ class Home extends Component {
             color: "#ffffff",
             padding: "0.5rem",
             width: "139px",
-            height: "43px"
+            height: "43px",
+            marginLeft: "1rem"
         }
         return (
             <div className="homeWrapper container-fluid">
@@ -22,13 +23,22 @@ class Home extends Component {
                             alt="logo"
                         />
                     </div>
-                    <Link
-                        to="/settings"
-                        type="button"
-                        className="btn homeWrapper__logo__button"
-                        style={style}>
-                        Settings
-                    </Link>
+                    <div>
+                        <Link
+                            to="/toDoList"
+                            type="button"
+                            className="btn"
+                            style={style}>
+                            Create Your List
+                        </Link>
+                        <Link
+                            to="/settings"
+                            type="button"
+                            className="btn homeWrapper__logo__button"
+                            style={style}>
+                            Settings
+                        </Link>
+                    </div>
                 </div>
             </div>
         )

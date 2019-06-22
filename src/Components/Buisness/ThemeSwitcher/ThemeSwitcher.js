@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import Switch from "react-switch";
+import './ThemeSwitcher.css'
 import { setLocalStorage, getLocalStorage } from '../../../Utilities/LocalStorage/LocalStorage'
 
 class ThemeSwitcher extends Component {
 
-    constructor(props) {
+    constructor() {
         super();
-        var currentTheme = props.currentTheme
         this.state = {
             checked: getLocalStorage()
         };
@@ -17,16 +17,17 @@ class ThemeSwitcher extends Component {
         this.setState({
             checked
         }, () => {
-            setLocalStorage(this.state.checked);
+            setLocalStorage(this.state.checked);                                                                                                                                                                                                  
+            
         }
         );
     }
 
     render() {
         return (
-            <label>
+            <label className="themeSwitcherLabel">
                 <span>Dark Theme</span>
-                <Switch onChange={this.handleChange} checked={this.state.checked} />
+                <Switch onChange={this.handleChange} checked={this.state.checked} onColor="#dea5bb"/>
             </label>
         )
     }

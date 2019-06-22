@@ -1,3 +1,11 @@
+.settingsWrapper {
+  padding: 1rem;
+}
+
+.settingsWrapper h1 {
+  text-align: left;
+}
+
 .settingsWrapper__themeSwitcher {
   margin: 1rem;
 }

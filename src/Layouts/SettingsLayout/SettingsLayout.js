@@ -15,13 +15,12 @@
 // export default SettingsLayout;
 
 import React, { Component } from 'react'
-import { Route } from 'react-router-dom'
 import Settings from '../../Components/Buisness/Settings/Settings';
 
 class SettingsLayout extends Component {
     render() {
         return (
-            <Settings currentTheme={this.props.currentTheme}/>
+            <Settings />
         );
     }
 }
