@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import './Home.css'
-import {  getLocalStorage } from '../../../Utilities/LocalStorage/LocalStorage'
 
 class Home extends Component {
     render() {
@@ -15,7 +14,7 @@ class Home extends Component {
             marginLeft: "1rem"
         }
         return (
-            <div className={getLocalStorage('theme') === 'dark'? "homeWrapper container-fluid darkTheme" : "homeWrapper container-fluid"}>
+            <div className="homeWrapper container-fluid">
                 <div className="homeWrapper__bckgrdImg" />
                 <div className="homeWrapper__logo">
                     <div className="homeWrapper__logo__logoDiv">

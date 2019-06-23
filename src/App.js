@@ -23,7 +23,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className={this.state.theme === 'dark'? 'App darkTheme' : 'App'}>
         <Router updateAppState={this.updateState.bind(this)} />
       </div>
     );
