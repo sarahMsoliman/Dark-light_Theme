@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Router from './Router'
 import { getLocalStorage } from './Utilities/LocalStorage/LocalStorage'
+import { Helmet } from 'react-helmet';
 
 class App extends Component {
   constructor() {
@@ -9,11 +10,6 @@ class App extends Component {
 
     this.state = { theme: getLocalStorage('theme')};
   }
-
-  // componentDidMount(){
-  //   debugger;
-  //   this.updateState()
-  // }
 
    updateState(){
     var currentTheme = getLocalStorage('theme');
@@ -24,8 +20,11 @@ class App extends Component {
 
   render() {
     return (
-      <div className={this.state.theme === 'dark'? 'App darkTheme' : 'App'}>
+      <div className="App">
         <Router updateAppState={this.updateState.bind(this)} />
+        <Helmet>
+          <body class={this.state.theme === 'dark'? 'darkTheme' : null} />
+        </Helmet>
       </div>
     );
   }
