@@ -7,15 +7,15 @@ class App extends Component {
   constructor() {
     super();
 
-    this.state = { theme: false};
+    this.state = { theme: 'light'};
   }
 
   componentDidMount(){
     this.updateState()
   }
 
-  updateState(){
-    var currentTheme = getLocalStorage();
+   updateState(){
+    var currentTheme = getLocalStorage('theme');
     this.setState({
       theme: currentTheme
     })
@@ -24,7 +24,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Router />
+        <Router updateAppState={this.updateState.bind(this)} />
       </div>
     );
   }

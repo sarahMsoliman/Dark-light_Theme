@@ -14,7 +14,7 @@ class Router extends Component {
                     <Header/>
                     <Switch>
                         <Route path="/home" render={()=><HomeLayout />} exact />
-                        <Route path="/settings" render={() => <SettingsLayout />} exact />
+                        <Route path="/settings" render={() => <SettingsLayout updateAppState={this.props.updateAppState}/>} exact />
                         <Route path="/toDoList" render={() => <ListsLayout />} exact />
                     </Switch>
                 </React.Fragment>

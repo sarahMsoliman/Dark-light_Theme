@@ -20,7 +20,7 @@ import Settings from '../../Components/Buisness/Settings/Settings';
 class SettingsLayout extends Component {
     render() {
         return (
-            <Settings />
+            <Settings updateAppState={this.props.updateAppState}/>
         );
     }
 }

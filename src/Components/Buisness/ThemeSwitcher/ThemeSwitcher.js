@@ -8,16 +8,23 @@ class ThemeSwitcher extends Component {
     constructor() {
         super();
         this.state = {
-            checked: getLocalStorage()
+            checked: this.checkThemeValue()
         };
         this.handleChange = this.handleChange.bind(this);
+    }
+
+    checkThemeValue(){
+        var currentTheme = getLocalStorage('theme');
+        return currentTheme === 'dark'? true : false
     }
 
     handleChange(checked) {
         this.setState({
             checked
         }, () => {
-            setLocalStorage(this.state.checked);                                                                                                                                                                                                  
+            var updatedTheme = this.state.checked === true ? 'dark' : 'light';
+            setLocalStorage('theme', updatedTheme);     
+            this.props.updateAppState();                                                                                                                                                                                            
             
         }
         );

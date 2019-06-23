@@ -1,3 +1,12 @@
+.darkTheme {
+  height: 100vh;
+  background-color: black;
+}
+
+.darkTheme h1 {
+  color: white;
+}
+
 .settingsWrapper {
   padding: 1rem;
 }
