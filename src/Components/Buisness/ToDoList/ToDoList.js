@@ -1,13 +1,10 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
+import ThreeColumnLayout from "../../../Layouts/ThreeColumnLayout/ThreeColumnLayout";
 
 class ToDoList extends Component {
-    render () {
-        return (
-            <div>
-                <h1>To Do List</h1>
-            </div>
-        )
-    }
+  render() {
+    return <ThreeColumnLayout children={<h1>hello</h1>} />;
+  }
 }
 
-export default ToDoList
+export default ToDoList;

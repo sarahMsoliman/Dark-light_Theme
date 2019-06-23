@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
-import ToDolList from '../../Components/Buisness/ToDoList/ToDoList';
 
 class ListsLayout extends Component {
     render() {
         return (
-            <ToDolList />
+            <React.Fragment>
+                {this.props.children}
+            </React.Fragment>
         );
     }
 }

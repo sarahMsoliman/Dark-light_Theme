@@ -7,12 +7,13 @@ class App extends Component {
   constructor() {
     super();
 
-    this.state = { theme: 'light'};
+    this.state = { theme: getLocalStorage('theme')};
   }
 
-  componentDidMount(){
-    this.updateState()
-  }
+  // componentDidMount(){
+  //   debugger;
+  //   this.updateState()
+  // }
 
    updateState(){
     var currentTheme = getLocalStorage('theme');

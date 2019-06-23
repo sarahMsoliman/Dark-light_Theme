@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
-import HomeLayout from './Layouts/HomeLayout/HomeLayout';
-import SettingsLayout from './Layouts/SettingsLayout/SettingsLayout';
-import ListsLayout from './Layouts/ListsLayout/ListsLayout';
+import Home from './Components/Buisness/Home/Home';
+import Settings from './Components/Buisness/Settings/Settings';
+import ToDoList from './Components/Buisness/ToDoList/ToDoList'
 import Header from './Components/Reusable/Header/Header'
 
 class Router extends Component {
@@ -13,9 +13,9 @@ class Router extends Component {
                 <React.Fragment>
                     <Header/>
                     <Switch>
-                        <Route path="/home" render={()=><HomeLayout />} exact />
-                        <Route path="/settings" render={() => <SettingsLayout updateAppState={this.props.updateAppState}/>} exact />
-                        <Route path="/toDoList" render={() => <ListsLayout />} exact />
+                        <Route path="/home" render={()=><Home />} exact />
+                        <Route path="/settings" render={() => <Settings updateAppState={this.props.updateAppState}/>} exact />
+                        <Route path="/toDoList" render={() => <ToDoList />} exact />
                     </Switch>
                 </React.Fragment>
             </BrowserRouter>
